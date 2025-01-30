@@ -2,9 +2,9 @@ package middleware
 
 import (
 	"context"
-	config "go-banking-auth/config"
 	"net/http"
 	"strings"
+	"github.com/ikhsanrifff/go-banking-auth/config"
 )
 
 // AuthMiddleware untuk validasi JWT
