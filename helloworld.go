@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
-func HelloWorld() { 
-	fmt.Println("HelloWorld")
- }
+func HelloWorld() string { 
+	var s = "Hello World"
+	fmt.Println(s)
+	return s	
+}
