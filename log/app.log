@@ -1,0 +1,121 @@
+{"level":"info","time":"2025-01-27T01:08:28+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:08:28+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-27T01:08:49+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T01:10:28+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:10:28+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/customers/add","time":"2025-01-27T01:10:44+07:00","message":"Create a new customer"}
+{"level":"info","time":"2025-01-27T01:11:50+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:11:50+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/customers/add","time":"2025-01-27T01:12:00+07:00","message":"Create a new customer"}
+{"level":"info","time":"2025-01-27T01:12:00+07:00","message":"Customer created successfully"}
+{"level":"info","status":"success","code":201,"message":"Customer created successfully","time":"2025-01-27T01:12:00+07:00","message":"Response Success sent successfully"}
+{"level":"info","time":"2025-01-27T01:12:22+07:00","message":"Creating account"}
+{"level":"info","status":"error","code":400,"message":"Customer ID and Currency cannot be empty","time":"2025-01-27T01:12:22+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:12:36+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T01:12:56+07:00","message":"Creating account"}
+{"level":"info","status":"error","code":400,"message":"Customer ID and Currency cannot be empty","time":"2025-01-27T01:12:56+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:14:16+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:14:16+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-27T01:14:25+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T01:14:53+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T01:31:29+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:31:29+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-27T01:31:59+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:31:59+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-27T01:32:15+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T01:38:40+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:38:40+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-27T01:40:18+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:40:18+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-27T01:40:28+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T01:41:27+07:00","message":"Creating transaction"}
+{"level":"info","time":"2025-01-27T01:41:42+07:00","message":"Creating transaction"}
+{"level":"info","status":"error","code":500,"message":"minimum transfer amount is 10.000","time":"2025-01-27T01:41:42+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:41:51+07:00","message":"Creating transaction"}
+{"level":"info","transaction":{"ID":"c43bc0db-8c20-4bc6-a564-7db502c6f735","DateTransaction":"2025-01-27 01:41:51","Type":"transfer","Nominal":10000,"AccountID":"9ac11821-96b0-4ab6-984b-7688eed460d2","Note":"Transaction Success","DestinationAccountID":"aa2db856-c48f-4808-ad6d-acea59b31b35"},"time":"2025-01-27T01:41:51+07:00","message":"Transaction created successfully"}
+{"level":"info","status":"success","code":201,"message":"Transaction created successfully","time":"2025-01-27T01:41:51+07:00","message":"Response Success sent successfully"}
+{"level":"info","time":"2025-01-27T01:42:14+07:00","message":"Creating account"}
+{"level":"info","method":"POST","path":"/customers/add","time":"2025-01-27T01:42:26+07:00","message":"Create a new customer"}
+{"level":"info","time":"2025-01-27T01:45:18+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:45:18+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-27T01:45:27+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T01:47:10+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:47:10+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-27T01:47:21+07:00","message":"Creating account"}
+{"level":"error","error":"Key: 'CreateAccountRequest[go-banking/domain.Account].Balance' Error:Field validation for 'Balance' failed on the 'required' tag\nKey: 'CreateAccountRequest[go-banking/domain.Account].Currency' Error:Field validation for 'Currency' failed on the 'required' tag\nKey: 'CreateAccountRequest[go-banking/domain.Account].Status' Error:Field validation for 'Status' failed on the 'required' tag","time":"2025-01-27T01:47:21+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"Key: 'CreateAccountRequest[go-banking/domain.Account].Balance' Error:Field validation for 'Balance' failed on the 'required' tag\nKey: 'CreateAccountRequest[go-banking/domain.Account].Currency' Error:Field validation for 'Currency' failed on the 'required' tag\nKey: 'CreateAccountRequest[go-banking/domain.Account].Status' Error:Field validation for 'Status' failed on the 'required' tag","time":"2025-01-27T01:47:21+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:48:24+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:48:24+07:00","message":"Database connected"}
+{"level":"info","time":"2025-01-27T01:48:35+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:48:35+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:48:35+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:49:42+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:49:42+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:49:42+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:50:03+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:50:03+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:50:03+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:50:05+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:50:05+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:50:05+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:50:08+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T01:50:15+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:50:15+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:50:15+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:50:23+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:50:23+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T01:50:23+07:00","message":"Response Error sent successfully"}
+{"level":"info","method":"POST","path":"/customers/add","time":"2025-01-27T01:50:27+07:00","message":"Create a new customer"}
+{"level":"info","method":"POST","path":"/customers/add","time":"2025-01-27T01:50:37+07:00","message":"Create a new customer"}
+{"level":"info","time":"2025-01-27T01:50:37+07:00","message":"Customer created successfully"}
+{"level":"info","status":"success","code":201,"message":"Customer created successfully","time":"2025-01-27T01:50:37+07:00","message":"Response Success sent successfully"}
+{"level":"info","time":"2025-01-27T01:50:48+07:00","message":"Creating transaction"}
+{"level":"info","time":"2025-01-27T01:51:03+07:00","message":"Creating transaction"}
+{"level":"info","transaction":{"ID":"2d79295d-e2cf-4435-80b3-731ce684dc24","DateTransaction":"2025-01-27 01:51:03","Type":"debit","Nominal":10000,"AccountID":"9ac11821-96b0-4ab6-984b-7688eed460d2","Note":"Transaction Success","DestinationAccountID":"aa2db856-c48f-4808-ad6d-acea59b31b35"},"time":"2025-01-27T01:51:03+07:00","message":"Transaction created successfully"}
+{"level":"info","status":"success","code":201,"message":"Transaction created successfully","time":"2025-01-27T01:51:03+07:00","message":"Response Success sent successfully"}
+{"level":"info","time":"2025-01-27T01:51:13+07:00","message":"Creating transaction"}
+{"level":"info","transaction":{"ID":"c623fe77-6039-4039-b763-6e014e795ec2","DateTransaction":"2025-01-27 01:51:13","Type":"debit","Nominal":1000,"AccountID":"9ac11821-96b0-4ab6-984b-7688eed460d2","Note":"Transaction Success","DestinationAccountID":"aa2db856-c48f-4808-ad6d-acea59b31b35"},"time":"2025-01-27T01:51:13+07:00","message":"Transaction created successfully"}
+{"level":"info","status":"success","code":201,"message":"Transaction created successfully","time":"2025-01-27T01:51:13+07:00","message":"Response Success sent successfully"}
+{"level":"info","time":"2025-01-27T01:51:21+07:00","message":"Creating transaction"}
+{"level":"info","status":"error","code":500,"message":"minimum transfer amount is 10.000","time":"2025-01-27T01:51:21+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T01:59:41+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T01:59:41+07:00","message":"Database connected"}
+{"level":"info","method":"POST","path":"/customers/add","time":"2025-01-27T01:59:53+07:00","message":"Create a new customer"}
+{"level":"info","time":"2025-01-27T02:00:05+07:00","message":"Creating transaction"}
+{"level":"info","time":"2025-01-27T02:00:17+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T02:00:17+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T02:00:17+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T02:00:22+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T02:00:34+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T02:00:46+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T02:00:46+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T02:00:46+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T02:01:01+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T02:01:01+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: missing destination name date_of_birth in *domain.Customer","time":"2025-01-27T02:01:01+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T02:01:16+07:00","message":"Getting account by ID"}
+{"level":"info","account":"&{ID:1 Customer_ID:2 Balance:150 Currency:EUR Status:true Customer:{ID: Name: City: Zipcode: DateOfBirth: Status:}}","time":"2025-01-27T02:01:16+07:00","message":"Account retrieved successfully"}
+{"level":"info","status":"success","code":200,"message":"Account retrieved successfully","time":"2025-01-27T02:01:16+07:00","message":"Response Success sent successfully"}
+{"level":"info","time":"2025-01-27T02:01:21+07:00","message":"Getting accounts"}
+{"level":"info","total":2,"time":"2025-01-27T02:01:21+07:00","message":"Accounts retrieved successfully"}
+{"level":"info","status":"success","code":200,"message":"Accounts retrieved successfully","time":"2025-01-27T02:01:21+07:00","message":"Response Success sent successfully"}
+{"level":"info","method":"GET","path":"/customers","time":"2025-01-27T02:01:30+07:00","message":"Get all customers"}
+{"level":"info","time":"2025-01-27T02:01:30+07:00","message":"Retrieving all customers"}
+{"level":"error","error":"failed to get customers: missing destination name date_of_birth in *[]domain.Customer","time":"2025-01-27T02:01:30+07:00","message":"Failed to retrieve customers"}
+{"level":"info","status":"error","code":500,"message":"failed to get customers: missing destination name date_of_birth in *[]domain.Customer","time":"2025-01-27T02:01:30+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T02:05:18+07:00","message":"Zerolog initiated successfully"}
+{"level":"info","time":"2025-01-27T02:05:18+07:00","message":"Database connected"}
+{"level":"info","method":"GET","path":"/customers","time":"2025-01-27T02:05:32+07:00","message":"Get all customers"}
+{"level":"info","time":"2025-01-27T02:05:32+07:00","message":"Retrieving all customers"}
+{"level":"info","total":15,"time":"2025-01-27T02:05:32+07:00","message":"Customers fetched successfully"}
+{"level":"info","status":"success","code":200,"message":"Customers fetched successfully","time":"2025-01-27T02:05:32+07:00","message":"Response Success sent successfully"}
+{"level":"info","time":"2025-01-27T02:05:38+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: sql: no rows in result set","time":"2025-01-27T02:05:38+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: sql: no rows in result set","time":"2025-01-27T02:05:38+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T02:06:03+07:00","message":"Creating account"}
+{"level":"info","time":"2025-01-27T02:06:03+07:00","message":"Account created successfully"}
+{"level":"info","status":"success","code":201,"message":"Account created successfully","time":"2025-01-27T02:06:03+07:00","message":"Response Success sent successfully"}
+{"level":"info","time":"2025-01-27T02:06:14+07:00","message":"Creating account"}
+{"level":"error","error":"customer not found: sql: no rows in result set","time":"2025-01-27T02:06:14+07:00","message":"Failed to create account"}
+{"level":"info","status":"error","code":500,"message":"customer not found: sql: no rows in result set","time":"2025-01-27T02:06:14+07:00","message":"Response Error sent successfully"}
+{"level":"info","time":"2025-01-27T02:06:23+07:00","message":"Creating account"}

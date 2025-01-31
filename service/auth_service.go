@@ -2,8 +2,10 @@ package service
 
 import (
 	"fmt"
+
 	adapter "github.com/ikhsanrifff/go-banking-auth/adapter/repository"
 	config "github.com/ikhsanrifff/go-banking-auth/config"
+	"github.com/ikhsanrifff/go-banking-auth/domain"
 
 	"golang.org/x/crypto/bcrypt"
 )
@@ -11,13 +13,14 @@ import (
 type AuthService interface {
 	LoginAccount(username, password string) (string, error)
 	CreateToken(user_id, token, expired_date string) (string, error)
+	GetAccountByUsername(username string) (*domain.Account, error) 
 }
 
 type AuthAdapterDB struct {
-	repo adapter.AccountRepository
+	repo adapter.AuthRepository
 }
 
-func NewAuthService(repo adapter.AccountRepository) *AuthAdapterDB {
+func NewAuthService(repo adapter.AuthRepository) *AuthAdapterDB {
 	return &AuthAdapterDB{repo: repo}
 }
 
@@ -37,11 +40,4 @@ func (u *AuthAdapterDB) LoginAccount(username, password string) (string, error) 
 	}
 
 	return token, nil
-}
-
-func (a *AuthAdapterDB) CreateToken(user_id, token, expired_date string) (string, error) {
-	user, err := a.repo
-	if err != nil {
-		return user, err
-	}
 }
