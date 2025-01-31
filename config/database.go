@@ -1,7 +1,7 @@
 package config
 
 import (
-	"go-banking/domain"
+	"github.com/ikhsanrifff/go-banking-auth/domain"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/rs/zerolog/log"
