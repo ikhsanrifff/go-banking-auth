@@ -24,6 +24,8 @@ github.com/ikhsanrifff/go-banking-lib v0.0.1 h1:nUP66+E8n31+x1kFc6M7YBH+S6M7APO7
 github.com/ikhsanrifff/go-banking-lib v0.0.1/go.mod h1:XWvFEVgo6L0blalM04f//QxI4lsnrXPDV8LUiZdBa7Q=
 github.com/ikhsanrifff/go-banking-lib v0.0.2 h1:xgZ9FzwckaSTCNk1CmElCE3NPt/nnwMleObLDlAEiew=
 github.com/ikhsanrifff/go-banking-lib v0.0.2/go.mod h1:XWvFEVgo6L0blalM04f//QxI4lsnrXPDV8LUiZdBa7Q=
+github.com/ikhsanrifff/go-banking-lib v0.0.4 h1:LXwSodh5+VNonR5QBJ6FL4pEF2YxGg/0GEv4oDqPBVs=
+github.com/ikhsanrifff/go-banking-lib v0.0.4/go.mod h1:rrCHJ6WBop+oT9SoEJs4N2XrmgIF6U4fkAViiTNVK/E=
 github.com/jmoiron/sqlx v1.4.0 h1:1PLqN7S1UYp5t4SrVVnt4nUVNemrDAtxlulVe+Qgm3o=
 github.com/jmoiron/sqlx v1.4.0/go.mod h1:ZrZ7UsYB/weZdl2Bxg6jCRO9c3YHl8r3ahlKmRT4JLY=
 github.com/joho/godotenv v1.5.1 h1:7eLL/+HRGLY0ldzfGMeQkb7vMd0as4CfYvUVzLqw0N0=

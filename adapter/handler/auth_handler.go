@@ -6,14 +6,14 @@ import (
 	"github.com/ikhsanrifff/go-banking-auth/dto"
 	"github.com/ikhsanrifff/go-banking-auth/service"
 	"github.com/ikhsanrifff/go-banking-auth/utils"
+	logger "github.com/ikhsanrifff/go-banking-lib/config"
 
 	"github.com/go-playground/validator/v10"
-	"github.com/rs/zerolog/log"
 )
 
 type AuthHandlerDB struct {
-	Service    service.AuthService
-	Validator  validator.Validate
+	Service   service.AuthService
+	Validator validator.Validate
 }
 
 func NewAuthHandlerDB(service service.AuthService) *AuthHandlerDB {
@@ -26,10 +26,10 @@ func (h *AuthHandlerDB) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	log.Info().
+	logger.GetLog().Info().
 		Str("method", r.Method).
 		Str("path", r.URL.Path).
-		Msg("Login")
+		Msg("Initializing Login")
 
 	var req dto.LoginRequest
 	err := json.NewDecoder(r.Body).Decode(&req)
@@ -44,17 +44,18 @@ func (h *AuthHandlerDB) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	token, err := h.Service.LoginAccount(req.Username, req.Password)
+	token, expiresAt, err := h.Service.LoginAccount(req.Username, req.Password)
 	if err != nil {
-		log.Error().Err(err).Msg("Username or password is incorrect. Failed to login")
+		logger.GetLog().Error().Err(err).Msg("Username or password is incorrect. Failed to login")
 		utils.ErrorResponse(w, http.StatusUnauthorized, "error", err.Error())
 		return
 	}
 
 	resp := dto.LoginResponse{
-		Token: token,
+		Token:     token,
+		ExpiresAt: expiresAt,
 	}
 
 	utils.ResponseJSON(w, resp, http.StatusOK, "success", "Login successful")
-	log.Info().Str("username", req.Username).Msg("Login successful")
+	logger.GetLog().Info().Str("username", req.Username).Msg("Login successful")
 }

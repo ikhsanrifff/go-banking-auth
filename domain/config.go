@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log"
 	"os"
-
+	
 	"github.com/joho/godotenv"
-	"github.com/spf13/viper"
+	logger "github.com/ikhsanrifff/go-banking-lib/config"
 )
 
 type Config struct {
@@ -29,40 +29,13 @@ type Config struct {
 		Database string `mapstructure:"name"`
 	} `mapstructure:"database"`
 }
-
-func GetConfig() (*Config, error) {
-	viper.SetConfigName("config")
-	viper.SetConfigType("yaml")
-	viper.AddConfigPath("./config")
-
-	if err := viper.ReadInConfig(); err != nil {
-		return nil, err
-	}
-
-	var config Config
-	if err := viper.Unmarshal(&config); err != nil {
-		return nil, err
-	}
-
-	return &config, nil
-}
-
-func (c *Config) GetDatabaseConfig() string {
-	return fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
-		c.DB.User,
-		c.DB.Password,
-		c.DB.Host,
-		c.DB.Port,
-		c.DB.Database,
-	)
-}
-
 /*
  * Implemtasi database dengan config dari .env
  */
-func (c *Config) GetDatabaseENVConfig() string {
+ func (c *Config) GetDatabaseENVConfig() string {
 	err := godotenv.Load(".env")
 	if err != nil {
+		logger.GetLog().Fatal().Err(err).Msg("Error loading .env file")
 		log.Fatal("Error loading .env file")
 	}
 

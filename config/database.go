@@ -2,44 +2,22 @@ package config
 
 import (
 	"github.com/ikhsanrifff/go-banking-auth/domain"
+	logger "github.com/ikhsanrifff/go-banking-lib/config"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/rs/zerolog/log"
 )
-
-/*
- * Implemtasi database dengan config dari .yaml
- */
-func NewDBConnectionYAML() (*sqlx.DB, error) {
-	config, err := domain.GetConfig()
-	if err != nil {
-		log.Fatal().Err(err).Msg("Failed to get config")
-	}
-
-	db, err := sqlx.Connect("mysql", config.GetDatabaseConfig())
-	if err != nil {
-		log.Fatal().Err(err).Msg("Failed to connect database")
-	} else {
-		log.Info().Msg("Database connected")
-	}
-
-	return db, nil
-}
 
 /*
  * Use database config from .env
  */
 func NewDBConnectionENV() (*sqlx.DB, error) {
-	config, err := domain.GetConfig()
-	if err != nil {
-		log.Fatal().Err(err).Msg("Failed to get config")
-	}
-
+	logger.GetLog().Info().Msg("Initializing database connection")
+	config := &domain.Config{}
 	db, err := sqlx.Connect("mysql", config.GetDatabaseENVConfig())
 	if err != nil {
-		log.Fatal().Err(err).Msg("Failed to connect database")
+		logger.GetLog().Fatal().Err(err).Msg("Failed to connect database")
 	} else {
-		log.Info().Msg("Database connected")
+		logger.GetLog().Info().Msg("Database connected")
 	}
 
 	return db, nil

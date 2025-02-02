@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/rs/zerolog/log"
+	// "github.com/rs/zerolog/log"
 )
 
 type Claims struct {
@@ -19,7 +19,8 @@ type Claims struct {
 var jwtKey = []byte(os.Getenv("JWT_SECRET_KEY"))
 
 // Generate JWT Token
-func GenerateJWT(id, username string) (string, error) {
+func GenerateJWT(id, username string) (string, string, error) {
+	// logger.GetLog().Info().Msg("Initializing Generate JWT Token")
 	expirationTime := time.Now().Add(2 * time.Hour)
 
 	claims := &Claims{
@@ -30,38 +31,45 @@ func GenerateJWT(id, username string) (string, error) {
 		},
 	}
 
+	converedtTime := claims.RegisteredClaims.ExpiresAt.Format("2006-01-02 15:04:05")
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 
 	// Sign token with secret key
 	tokenString, err := token.SignedString(jwtKey)
 	if err != nil {
-		return "", err
+		// logger.GetLog().Error().Err(err).Msg("Failed to generate token")
+		return "", "", err
 	}
 
-	log.Info().
-		Str("username", username).
-		Msg("Token generated successfully")
+	// logger.GetLog().Info().
+	// 	Str("username", username).
+	// 	Str("expiresAt", converedtTime).
+	// 	Msg("Token generated successfully")
 
-	return tokenString, nil
+	return tokenString, converedtTime, nil
 }
 
 // ParseToken for validating JWT
 func ParseToken(tokenString string) (*Claims, error) {
+	// logger.GetLog().Info().Msg("Initializing Parse JWT Token")
 	token, err := jwt.ParseWithClaims(tokenString, &Claims{}, func(token *jwt.Token) (interface{}, error) {
 		return jwtKey, nil
 	})
 	if err != nil {
+		// logger.GetLog().Error().Err(err).Msg("Failed to parse token")
 		return nil, err
 	}
 
 	claims, ok := token.Claims.(*Claims)
 	if !ok || !token.Valid {
+		// logger.GetLog().Error().Msg("Invalid token")
 		return nil, fmt.Errorf("invalid token")
 	}
 
-	log.Info().
-		Str("username", claims.Username).
-		Msg("Token parsed successfully")
+	// logger.GetLog().Info().
+	// 	Str("username", claims.Username).
+	// 	Str("expiresAt", claims.ExpiresAt.String()).
+	// 	Msg("Token parsed successfully")
 
 	return claims, nil
 }
